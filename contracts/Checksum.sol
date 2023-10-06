@@ -3,10 +3,10 @@ pragma solidity ^0.8.0;
 
 contract CensusSystem {
     struct Checksum {
-        uint256 id; // db id
-        string verificationHash; // MD5
-        string entityId; // empresa (ej: PCR, Aluar, o un uniqueId de referencia)
-        string createdAt; // timestamp de subida del archivo
+        uint256 id;
+        string verificationHash;
+        string entityId;
+        string createdAt;
     }
 
     address public owner;
@@ -15,7 +15,6 @@ contract CensusSystem {
     
     event NewChecksumAdded(uint256 indexed id, string verificationHash, string entityId);
 
-    // solo nosotros (la address que deployo el contrato)
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can perform this action.");
         _;
