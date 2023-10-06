@@ -1,1 +1,1 @@
-# core-contracts
+# genergy core smart contracts
