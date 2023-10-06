@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract CensusSystem {
+contract DataIntegritySystem {
     struct Checksum {
         uint256 id;
         string verificationHash;
